@@ -2,11 +2,10 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="section hero-wrap overflow-hidden">
-      {/* Dekoracje tła */}
-      <div aria-hidden className="absolute -top-24 -left-24 w-[36rem] h-[36rem] rounded-full blob blob-cyan float-slow" />
-      <div aria-hidden className="absolute -bottom-24 -right-32 w-[40rem] h-[40rem] rounded-full blob blob-purple float-slower" />
-      <div aria-hidden className="absolute inset-0 grid-overlay" />
+    <section className="section hero-wrap overflow-hidden relative">
+      <div aria-hidden className="absolute -top-24 -left-24 w-[36rem] h-[36rem] rounded-full blob blob-cyan float-slow opacity-40" />
+      <div aria-hidden className="absolute -bottom-24 -right-32 w-[40rem] h-[40rem] rounded-full blob blob-purple float-slower opacity-40" />
+      <div aria-hidden className="absolute inset-0 grid-overlay opacity-30" />
 
       <div className="container grid gap-10 md:grid-cols-2 md:items-center relative">
         <div>
@@ -24,9 +23,9 @@ export default function Hero() {
 
           {/* Badges */}
           <div className="mt-6 flex flex-wrap gap-2 text-xs opacity-80">
-            <span className="px-3 py-1 rounded-full border border-white/15">Core Web Vitals 90+</span>
-            <span className="px-3 py-1 rounded-full border border-white/15">Semantyka & A11y</span>
-            <span className="px-3 py-1 rounded-full border border-white/15">Next.js & TypeScript</span>
+            <span className="px-3 py-1 rounded-full border border-white/15">Gwarancja</span>
+            <span className="px-3 py-1 rounded-full border border-white/15">Estetyka</span>
+            <span className="px-3 py-1 rounded-full border border-white/15">Doświadczenie</span>
           </div>
         </div>
 
@@ -47,8 +46,8 @@ export default function Hero() {
       <div className="container mt-12">
         <div className="marquee text-sm opacity-80">
           <div className="marquee-track">
-            <span>Next.js</span><span>•</span><span>TypeScript</span><span>•</span><span>Tailwind</span><span>•</span><span>Headless CMS</span><span>•</span><span>SEO</span><span>•</span><span>Analytics</span>
-            <span className="ml-8">Next.js</span><span>•</span><span>TypeScript</span><span>•</span><span>Tailwind</span><span>•</span><span>Headless CMS</span><span>•</span><span>SEO</span><span>•</span><span>Analytics</span>
+            <span>•</span><span>Next.js</span><span>•</span><span>TypeScript</span><span>•</span><span>Tailwind</span><span>•</span><span>SEO</span><span>•</span><span>Analytics</span>
+            <span className="ml-8">Next.js</span><span>•</span><span>TypeScript</span><span>•</span><span>Tailwind</span><span>•</span><span>SEO</span><span>•</span><span>Analytics</span>
           </div>
         </div>
       </div>
