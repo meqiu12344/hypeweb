@@ -28,14 +28,14 @@ const ServiceIcon = ({ type }: { type: number }) => {
 };
 
 const ServiceCard = ({ title, desc, number, icon }: { title: string; desc: string; number: number; icon: number }) => (
-  <div className="group relative h-full p-6 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]">
+  <div className="group relative h-full p-6 rounded-2xl border border-slate-700/50 bg-linear-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-500/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]">
     {/* Animated gradient background on hover */}
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{
       background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(168, 85, 247, 0.1))'
     }} />
     
     {/* Animated background blur orb */}
-    <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+    <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-linear-to-br from-cyan-500/5 to-purple-500/5 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
     
     {/* Content */}
     <div className="relative z-10">
@@ -66,7 +66,7 @@ const ServiceCard = ({ title, desc, number, icon }: { title: string; desc: strin
       </p>
 
       {/* Bottom accent bar */}
-      <div className="mt-4 h-1 w-0 bg-gradient-to-r from-cyan-500 to-purple-500 group-hover:w-full transition-all duration-500" />
+      <div className="mt-4 h-1 w-0 bg-linear-to-r from-cyan-500 to-purple-500 group-hover:w-full transition-all duration-500" />
     </div>
   </div>
 );
@@ -93,7 +93,7 @@ export default function Services() {
           <div className="inline-block">
             <span className="text-sm font-semibold text-emerald-400 uppercase tracking-widest px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10">Nasze Możliwości</span>
           </div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-emerald-100 to-white bg-clip-text text-transparent ">
+          <h2 className="mt-3 text-4xl md:text-5xl font-bold bg-linear-to-r from-white via-emerald-100 to-white bg-clip-text text-transparent">
             Kompleksowe Usługi
           </h2>
           <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">

@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/30">
+    <header className="sticky top-0 z-50 backdrop-blur supports-backdrop-filter:bg-black/30">
       <div className="container flex items-center justify-between py-4">
         <a href="#" className="flex items-center" aria-label="hypeweb strona główna">
           <span className="sr-only">hypeweb</span>

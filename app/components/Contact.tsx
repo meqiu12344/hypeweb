@@ -41,8 +41,8 @@ export default function CTA() {
     <section id="kontakt" className="section relative overflow-hidden">
       {/* Background animations */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-cyan-500/15 to-transparent rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-l from-purple-500/15 to-transparent rounded-full blur-3xl animate-float-slower" />
+        <div className="absolute top-0 left-0 w-150 h-150 bg-linear-to-br from-cyan-500/15 to-transparent rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-0 right-0 w-125 h-125 bg-linear-to-l from-purple-500/15 to-transparent rounded-full blur-3xl animate-float-slower" />
       </div>
 
       <div className="container relative z-10 grid gap-10 md:grid-cols-2 items-start">
@@ -52,7 +52,7 @@ export default function CTA() {
             Kontakt
           </span>
           <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight">
-            <span className="block bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
               Skontaktuj się<br/>z nami
             </span>
           </h2>
@@ -94,7 +94,7 @@ export default function CTA() {
         </div>
 
         {/* Right: Form */}
-        <div className="group relative rounded-3xl border border-slate-700/40 p-8 bg-gradient-to-br from-slate-800/60 to-slate-900/80 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/60 hover:shadow-[0_0_60px_rgba(34,211,238,0.2)]">
+        <div className="group relative rounded-3xl border border-slate-700/40 p-8 bg-linear-to-br from-slate-800/60 to-slate-900/80 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/60 hover:shadow-[0_0_60px_rgba(34,211,238,0.2)]">
           {/* Animated gradient overlay on hover */}
           <div
             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -104,7 +104,7 @@ export default function CTA() {
           />
           
           {/* Animated blur orb */}
-          <div className="absolute -top-1/2 -right-1/4 w-[400px] h-[400px] bg-gradient-to-br from-cyan-500/20 to-purple-500/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
+          <div className="absolute -top-1/2 -right-1/4 w-100 h-100 bg-linear-to-br from-cyan-500/20 to-purple-500/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
 
           <form onSubmit={onSubmit} className="grid gap-5 relative z-10">
             <div className="grid gap-2">

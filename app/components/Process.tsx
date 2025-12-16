@@ -48,7 +48,7 @@ const TimelineItem = ({
       {/* Content card */}
       <div className="flex-1">
         <div
-          className={`group relative h-full p-8 rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] hover:scale-105 cursor-pointer ${
+          className={`group relative h-full p-8 rounded-3xl border border-slate-700/50 bg-linear-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] hover:scale-105 cursor-pointer ${
             isLeft ? 'text-right' : 'text-left'
           }`}
         >
@@ -61,14 +61,14 @@ const TimelineItem = ({
           />
 
           {/* Animated blur orb */}
-          <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/8 to-purple-500/8 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+          <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-linear-to-br from-cyan-500/8 to-purple-500/8 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
 
           {/* Content */}
           <div className="relative z-10 flex flex-col h-full">
             {/* Number badge */}
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="text-xs font-bold text-cyan-300 uppercase tracking-widest">Etap {step}</span>
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400" />
+              <div className="w-2 h-2 rounded-full bg-linear-to-r from-cyan-400 to-purple-400" />
             </div>
 
             {/* Title */}
@@ -77,12 +77,12 @@ const TimelineItem = ({
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed flex-grow">
+            <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed grow">
               {desc}
             </p>
 
             {/* Bottom accent bar */}
-            <div className={`mt-6 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 transition-all duration-500 rounded-full ${isLeft ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+            <div className={`mt-6 h-1 bg-linear-to-r from-cyan-500 via-purple-500 to-cyan-500 transition-all duration-500 rounded-full ${isLeft ? 'w-full' : 'w-0 group-hover:w-full'}`} />
           </div>
         </div>
       </div>
@@ -90,14 +90,14 @@ const TimelineItem = ({
       {/* Center dot with connector */}
       <div className="relative flex flex-col items-center justify-center py-8">
         {/* Glow effect */}
-        <div className="absolute w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500/30 to-purple-500/30 blur-xl animate-pulse" />
+        <div className="absolute w-16 h-16 rounded-full bg-linear-to-r from-cyan-500/30 to-purple-500/30 blur-xl animate-pulse" />
 
         {/* Icon background circle */}
         <div className="absolute w-14 h-14 rounded-full border border-cyan-500/30 group-hover:border-cyan-400/60 transition-all duration-500" />
 
         {/* Main icon circle */}
         <div
-          className="w-12 h-12 rounded-full flex items-center justify-center text-white relative z-20 flex-shrink-0 text-lg"
+          className="w-12 h-12 rounded-full flex items-center justify-center text-white relative z-20 shrink-0 text-lg"
           style={{
             background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
             boxShadow: '0 0 24px rgba(34, 211, 238, 0.5)',
@@ -121,16 +121,16 @@ const TimelineItem = ({
     <div className="md:hidden w-full">
       <div className="flex gap-6">
         {/* Timeline dot and line */}
-        <div className="flex flex-col items-center flex-shrink-0">
+        <div className="flex flex-col items-center shrink-0">
           {/* Glow effect */}
-          <div className="absolute w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-lg" />
+          <div className="absolute w-14 h-14 rounded-full bg-linear-to-r from-cyan-500/20 to-purple-500/20 blur-lg" />
 
           {/* Icon background circle */}
           <div className="absolute w-12 h-12 rounded-full border border-cyan-500/30" />
 
           {/* Dot with icon */}
           <div
-            className="w-12 h-12 rounded-full flex items-center justify-center text-white flex-shrink-0 relative z-10"
+            className="w-12 h-12 rounded-full flex items-center justify-center text-white shrink-0 relative z-10"
             style={{
               background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
               boxShadow: '0 0 20px rgba(34, 211, 238, 0.4)',
@@ -141,13 +141,13 @@ const TimelineItem = ({
 
           {/* Vertical line (except last) - thicker and more visible */}
           {number < 4 && (
-            <div className="w-1.5 flex-grow bg-gradient-to-b from-cyan-500/80 via-cyan-500/40 to-transparent mt-4 rounded-full" />
+            <div className="w-1.5 grow bg-linear-to-b from-cyan-500/80 via-cyan-500/40 to-transparent mt-4 rounded-full" />
           )}
         </div>
 
         {/* Content card */}
         <div className="flex-1 pt-1 pb-12">
-          <div className="group relative p-6 rounded-2xl border border-slate-700/50 bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/50 hover:scale-105">
+          <div className="group relative p-6 rounded-2xl border border-slate-700/50 bg-linear-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/50 hover:scale-105">
             {/* Animated gradient background */}
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -183,13 +183,13 @@ export default function Process() {
     <section id="proces" className="section relative overflow-hidden">
       {/* Background decoration - premium */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-gradient-to-r from-cyan-500/10 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-l from-purple-500/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-0 w-125 h-125 bg-linear-to-r from-cyan-500/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-125 h-125 bg-linear-to-l from-purple-500/10 to-transparent rounded-full blur-3xl" />
       </div>
 
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,211,238,0.05)_1px,transparent_1px),linear-gradient(rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,211,238,0.05)_1px,transparent_1px),linear-gradient(rgba(34,211,238,0.05)_1px,transparent_1px)] bg-size-[50px_50px]" />
       </div>
 
       <div className="container relative z-10">
@@ -197,7 +197,7 @@ export default function Process() {
         <div className="mb-20 text-center">
           <span className="inline-block text-xs font-bold text-pink-400 uppercase tracking-widest px-4 py-2 rounded-full border border-pink-500/30 bg-pink-500/5">Nasz Proces Pracy</span>
           <h2 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
-            <span className="block bg-gradient-to-r from-white via-pink-100 to-white bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-white via-pink-100 to-white bg-clip-text text-transparent">
               Jak Pracujemy
             </span>
           </h2>
@@ -209,14 +209,14 @@ export default function Process() {
         {/* Timeline container */}
         <div className="relative">
           {/* Vertical line (only visible on md:lg breakpoint) */}
-          <div className="hidden md:block lg:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-cyan-500/40 to-transparent -translate-x-1/2 rounded-full" />
+          <div className="hidden md:block lg:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-transparent via-cyan-500/40 to-transparent -translate-x-1/2 rounded-full" />
 
           {/* Desktop horizontal layout (lg+) - clean cards only */}
           <div className="hidden lg:flex gap-8 items-stretch">
             {steps.map((it, i) => (
               <div key={i} className="flex-1 flex flex-col">
                 {/* Card with premium styling */}
-                <div className="group relative flex-1 p-8 rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/70 to-slate-900/70 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/60 hover:shadow-[0_0_50px_rgba(34,211,238,0.25)] hover:scale-105 hover:-translate-y-2">
+                <div className="group relative flex-1 p-8 rounded-3xl border border-slate-700/50 bg-linear-to-br from-slate-800/70 to-slate-900/70 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/60 hover:shadow-[0_0_50px_rgba(34,211,238,0.25)] hover:scale-105 hover:-translate-y-2">
                   {/* Animated gradient background */}
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -226,7 +226,7 @@ export default function Process() {
                   />
 
                   {/* Animated blur orb */}
-                  <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+                  <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-linear-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col h-full">
@@ -242,12 +242,12 @@ export default function Process() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed flex-grow">
+                    <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed grow">
                       {it.d}
                     </p>
 
                     {/* Bottom accent bar */}
-                    <div className="mt-8 h-1 w-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 transition-all duration-500 rounded-full group-hover:w-full" />
+                    <div className="mt-8 h-1 w-0 bg-linear-to-r from-cyan-500 via-purple-500 to-cyan-500 transition-all duration-500 rounded-full group-hover:w-full" />
                   </div>
                 </div>
               </div>

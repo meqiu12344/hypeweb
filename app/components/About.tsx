@@ -22,8 +22,8 @@ export default function About() {
     <section id="onasna" className="section relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-25">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-l from-purple-500/15 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-cyan-500/15 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-125 h-125 bg-linear-to-l from-purple-500/15 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-125 h-125 bg-linear-to-r from-cyan-500/15 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="container relative z-10">
@@ -33,7 +33,7 @@ export default function About() {
             Poznaj Zespół
           </span>
           <h2 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
-            <span className="block bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
               O Nas
             </span>
           </h2>
@@ -47,7 +47,7 @@ export default function About() {
           {team.map((member, i) => (
             <div
               key={i}
-              className="group relative flex flex-col rounded-3xl border border-slate-700/50 bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-purple-400/60 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)]"
+              className="group relative flex flex-col rounded-3xl border border-slate-700/50 bg-linear-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-purple-400/60 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)]"
             >
               {/* Animated gradient background on hover */}
               <div
@@ -58,7 +58,7 @@ export default function About() {
               />
 
               {/* Animated blur orb */}
-              <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-gradient-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-linear-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
 
               {/* Image container */}
               <div className="relative h-80 overflow-hidden">
@@ -69,7 +69,7 @@ export default function About() {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/80" />
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-900/80" />
               </div>
 
               {/* Content */}
@@ -85,7 +85,7 @@ export default function About() {
                 </p>
 
                 {/* Bio */}
-                <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-6 flex-grow">
+                <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-6 grow">
                   {member.bio}
                 </p>
 
@@ -102,7 +102,7 @@ export default function About() {
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="mt-6 h-1 w-0 bg-gradient-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-500 rounded-full" />
+                <div className="mt-6 h-1 w-0 bg-linear-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-500 rounded-full" />
               </div>
             </div>
           ))}

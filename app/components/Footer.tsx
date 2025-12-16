@@ -5,9 +5,9 @@ export default function Footer() {
     <footer className="section relative overflow-hidden">
       {/* Background accents */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
-        <div className="absolute -left-20 -top-20 w-80 h-80 bg-gradient-to-br from-cyan-500/15 to-purple-500/15 rounded-full blur-3xl" />
-        <div className="absolute -right-16 bottom-0 w-64 h-64 bg-gradient-to-tr from-purple-500/15 to-cyan-500/15 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.03),_transparent_45%)]" />
+        <div className="absolute -left-20 -top-20 w-80 h-80 bg-linear-to-br from-cyan-500/15 to-purple-500/15 rounded-full blur-3xl" />
+        <div className="absolute -right-16 bottom-0 w-64 h-64 bg-linear-to-tr from-purple-500/15 to-cyan-500/15 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_45%)]" />
       </div>
 
       <div className="container relative z-10 border-t border-white/10 pt-10">
@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
               <span className="text-xs text-white/60">{new Date().getFullYear()}</span>
             </div>
-            <p className="text-lg font-semibold bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
+            <p className="text-lg font-semibold bg-linear-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
               Tworzymy cyfrowe produkty, które robią wrażenie i dowożą wyniki biznesowe.
             </p>
             <div className="flex flex-wrap gap-2 text-xs text-white/70">

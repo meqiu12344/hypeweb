@@ -72,9 +72,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      maxImagePreview: "large",
-      maxSnippet: -1,
-      maxVideoPreview: -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
   referrer: "origin-when-cross-origin",
@@ -88,7 +88,6 @@ export const metadata: Metadata = {
   viewport: {
     width: "device-width",
     initialScale: 1,
-    themeColor: "#0b1224",
   },
   icons: {
     icon: "/favicon.svg",

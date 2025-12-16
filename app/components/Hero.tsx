@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="section hero-wrap overflow-hidden relative">
-      <div aria-hidden className="absolute -top-24 -left-24 w-[36rem] h-[36rem] rounded-full blob blob-cyan float-slow opacity-40" />
-      <div aria-hidden className="absolute -bottom-24 -right-32 w-[40rem] h-[40rem] rounded-full blob blob-purple float-slower opacity-40" />
+      <div aria-hidden className="absolute -top-24 -left-24 w-xl h-144 rounded-full blob blob-cyan float-slow opacity-40" />
+      <div aria-hidden className="absolute -bottom-24 -right-32 w-160 h-160 rounded-full blob blob-purple float-slower opacity-40" />
       <div aria-hidden className="absolute inset-0 grid-overlay opacity-30" />
 
       <div className="container grid gap-10 md:grid-cols-2 md:items-center relative">
@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
 
         {/* Zdjęcie hero */}
-        <div className="relative border-gradient rounded-xl overflow-hidden aspect-[4/3] md:aspect-[5/4]">
+        <div className="relative border-gradient rounded-xl overflow-hidden aspect-4/3 md:aspect-5/4">
           <Image
             src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80"
             alt="Zespół pracujący nad stroną — hypeweb"
