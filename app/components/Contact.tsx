@@ -106,7 +106,7 @@ export default function CTA() {
           {/* Animated blur orb */}
           <div className="absolute -top-1/2 -right-1/4 w-100 h-100 bg-linear-to-br from-cyan-500/20 to-purple-500/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
 
-          <form onSubmit={onSubmit} className="grid gap-5 relative z-10">
+          <form action="https://formspree.io/f/mdannneo" method="POST" className="grid gap-5 relative z-10">
             <div className="grid gap-2">
               <label htmlFor="name" className="text-xs uppercase tracking-widest font-semibold text-slate-300">Imię i nazwisko *</label>
               <input
