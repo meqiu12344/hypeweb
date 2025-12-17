@@ -112,8 +112,6 @@ export default function CTA() {
               <input
                 id="name"
                 type="text"
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
                 placeholder="Jan Kowalski"
                 className="w-full rounded-xl bg-black/40 border border-slate-700/60 px-4 py-2.5 text-white placeholder:text-slate-500 outline-none focus:border-cyan-400/80 focus:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300"
                 required
@@ -124,8 +122,6 @@ export default function CTA() {
               <input
                 id="email"
                 type="email"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
                 placeholder="twoj@mail.com"
                 className="w-full rounded-xl bg-black/40 border border-slate-700/60 px-4 py-2.5 text-white placeholder:text-slate-500 outline-none focus:border-cyan-400/80 focus:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300"
                 required
@@ -136,8 +132,6 @@ export default function CTA() {
               <input
                 id="phone"
                 type="tel"
-                value={form.phone}
-                onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 placeholder="+48 500 000 000"
                 className="w-full rounded-xl bg-black/40 border border-slate-700/60 px-4 py-2.5 text-white placeholder:text-slate-500 outline-none focus:border-cyan-400/80 focus:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300"
               />
@@ -147,8 +141,6 @@ export default function CTA() {
               <textarea
                 id="message"
                 rows={5}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
                 placeholder="Kilka zdań o projekcie, cele, terminy..."
                 className="w-full rounded-xl bg-black/40 border border-slate-700/60 px-4 py-2.5 text-white placeholder:text-slate-500 outline-none focus:border-cyan-400/80 focus:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-all duration-300 resize-y"
                 required
