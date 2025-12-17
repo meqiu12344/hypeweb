@@ -5,16 +5,14 @@ export default function About() {
     {
       name: 'Mateusz Maniak',
       role: 'Programista',
-      bio: 'Specjalizuje się w Full-Stack Development. Ponad 10 lat doświadczenia w tworzeniu zaawansowanych aplikacji webowych. Mentor w branży tech.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80',
-      expertise: ['Next.js', 'TypeScript', 'Node.js', 'System Design']
+      bio: '" Od 14 roku życia interesuje się programowaniem. Już 3 lat zajmuje się profesjonalnie tworzeniem stron internetowych oraz aplikacji webowych dla prywatnych klientów. Stworzenie strony dla ciebie to dla mnie przyjemność oraz pasja. "',
+      image: '/maniak2.jpg',
     },
     {
       name: 'Emil Malczak',
       role: 'Przedstawiciel Handlowy',
-      bio: 'Projektantka doświadczona w designie interfejsów. Pracuje nad doświadczeniem użytkownika od 8 lat. Pasjonata accessibility.',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80',
-      expertise: ['UI/UX Design', 'Figma', 'Accessibility', 'Design Systems']
+      bio: '" Od zawsze miałem łatwość w kontaktach inerpersonalnych oraz budowaniu relacji z klientami. Moim celem jest zrozumienie twoich potrzeb i zapewnienie, że otrzymasz najlepsze możliwe rozwiązanie dla swojej strony internetowej. "',
+      image: '/emil2.png',
     }
   ];
 
@@ -30,15 +28,15 @@ export default function About() {
         {/* Header */}
         <div className="mb-16 text-center">
           <span className="inline-block text-xs font-bold text-purple-400 uppercase tracking-widest px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/5">
-            Poznaj Zespół
+            Kim jesteśmy ?
           </span>
           <h2 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
             <span className="block bg-linear-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
-              O Nas
+              Poznaj nas bliżej
             </span>
           </h2>
           <p className="mt-6 text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Profesjonalny zespół z wieloletnim doświadczeniem. Łączymy najnowsze technologie z doskonałym designem.
+            Jesteśmy dwójką młodych oraz ambitnych studentów z Wrocławia, którzy posiadają pasję do tworzenia nowoczesnych i funkcjonalnych stron internetowych. Naszym celem jest dostarczanie rozwiązań, które nie tylko spełniają oczekiwania klientów, ale także przewyższają je pod względem jakości i innowacyjności.
           </p>
         </div>
 
@@ -85,21 +83,9 @@ export default function About() {
                 </p>
 
                 {/* Bio */}
-                <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-6 grow">
+                <i className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-6 grow">
                   {member.bio}
-                </p>
-
-                {/* Expertise tags */}
-                <div className="flex flex-wrap gap-2">
-                  {member.expertise.map((skill, j) => (
-                    <span
-                      key={j}
-                      className="px-3 py-1 text-xs font-semibold text-cyan-300 rounded-full border border-cyan-500/30 bg-cyan-500/10"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+                </i>
 
                 {/* Bottom accent line */}
                 <div className="mt-6 h-1 w-0 bg-linear-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-500 rounded-full" />

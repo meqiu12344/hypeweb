@@ -65,8 +65,8 @@ export default function CTA() {
               <div className="text-2xl mt-0.5">📞</div>
               <div className="flex-1">
                 <p className="text-xs uppercase tracking-widest text-slate-400 font-medium">Telefon</p>
-                <a href="tel:+48500111222" className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">
-                  +48 500 111 222
+                <a href="tel:+48660240968" className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">
+                  +48 660 240 968
                 </a>
                 <br/>
                 <a href="tel:+48500111222" className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">
@@ -78,8 +78,8 @@ export default function CTA() {
               <div className="text-2xl mt-0.5">✉️</div>
               <div className="flex-1">
                 <p className="text-xs uppercase tracking-widest text-slate-400 font-medium">Email</p>
-                <a href="mailto:hello@hypeweb.space" className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">
-                  hello@hypeweb.space
+                <a href="mailto:hypeweb.space@gmail.com" className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">
+                  hypeweb.space@gmail.com
                 </a>
               </div>
             </div>

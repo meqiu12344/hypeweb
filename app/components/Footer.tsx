@@ -47,8 +47,8 @@ export default function Footer() {
           <div>
             <p className="text-sm font-semibold text-white/80 uppercase tracking-widest mb-3">Kontakt</p>
             <div className="space-y-2 text-sm text-white/70">
-              <a href="mailto:hello@hypeweb.space" className="block hover:text-cyan-200 transition-colors">hello@hypeweb.space</a>
-              <a href="tel:+48500111222" className="block hover:text-cyan-200 transition-colors">+48 500 111 222</a>
+              <a href="mailto:hypeweb.space@gmail.com" className="block hover:text-cyan-200 transition-colors">hypeweb.space@gmail.com</a>
+              <a href="tel:+48660240968" className="block hover:text-cyan-200 transition-colors">+48 660 240 968</a>
               <a href="tel:+48730496403" className="block hover:text-cyan-200 transition-colors">+48 730 496 403</a>
               <p className="text-white/50">Pon–Pt: 9:00–17:00</p>
             </div>

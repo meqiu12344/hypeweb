@@ -74,9 +74,9 @@ const ServiceCard = ({ title, desc, number, icon }: { title: string; desc: strin
 export default function Services() {
   const items = [
     { t: 'Projektowanie UX/UI', d: 'Makiety, design system, prototypy, dostępność. Pracujemy nad doświadczeniem użytkownika na każdym kroku.' },
-    { t: 'Development', d: 'Next.js, TypeScript, React, Tailwind, Node.js. Najnowsze technologie, best practices, skalowalne rozwiązania.' },
+    { t: 'Wdrożenie', d: 'Next.js, TypeScript, React, Tailwind, Node.js. Najnowsze technologie, best practices, skalowalne rozwiązania.' },
     { t: 'SEO & Wydajność', d: 'Optymalizacja struktury, metadane, Core Web Vitals 90+, szybkość ładowania, bezpieczeństwo.' },
-    { t: 'Wsparcie 24/7', d: 'Hosting, monitoring, aktualizacje, rozwój. Zawsze dostępni, gdy potrzebujesz pomocy.' },
+
   ];
 
   return (
@@ -102,7 +102,7 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <ServiceCard
               key={i}
