@@ -29,148 +29,6 @@ const ProcessIcon = ({ number }: { number: number }) => {
   return icons[number - 1];
 };
 
-const TimelineItem = ({
-  step,
-  title,
-  desc,
-  number,
-  isLeft,
-}: {
-  step: string;
-  title: string;
-  desc: string;
-  number: number;
-  isLeft: boolean;
-}) => (
-  <div className="flex flex-col items-center">
-    {/* Desktop: alternating left-right layout */}
-    <div className={`hidden md:flex w-full gap-10 items-stretch ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
-      {/* Content card */}
-      <div className="flex-1">
-        <div
-          className={`group relative h-full p-8 rounded-3xl border border-slate-700/50 bg-linear-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.25)] hover:scale-105 cursor-pointer ${
-            isLeft ? 'text-right' : 'text-left'
-          }`}
-        >
-          {/* Animated gradient background */}
-          <div
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            style={{
-              background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(168, 85, 247, 0.15))',
-            }}
-          />
-
-          {/* Animated blur orb */}
-          <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-linear-to-br from-cyan-500/8 to-purple-500/8 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
-
-          {/* Content */}
-          <div className="relative z-10 flex flex-col h-full">
-            {/* Number badge */}
-            <div className="inline-flex items-center gap-2 mb-4">
-              <span className="text-xs font-bold text-cyan-300 uppercase tracking-widest">Etap {step}</span>
-              <div className="w-2 h-2 rounded-full bg-linear-to-r from-cyan-400 to-purple-400" />
-            </div>
-
-            {/* Title */}
-            <h3 className="text-2xl font-bold text-white group-hover:text-cyan-200 transition-colors duration-300 mb-3">
-              {title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed grow">
-              {desc}
-            </p>
-
-            {/* Bottom accent bar */}
-            <div className={`mt-6 h-1 bg-linear-to-r from-cyan-500 via-purple-500 to-cyan-500 transition-all duration-500 rounded-full ${isLeft ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-          </div>
-        </div>
-      </div>
-
-      {/* Center dot with connector */}
-      <div className="relative flex flex-col items-center justify-center py-8">
-        {/* Glow effect */}
-        <div className="absolute w-16 h-16 rounded-full bg-linear-to-r from-cyan-500/30 to-purple-500/30 blur-xl animate-pulse" />
-
-        {/* Icon background circle */}
-        <div className="absolute w-14 h-14 rounded-full border border-cyan-500/30 group-hover:border-cyan-400/60 transition-all duration-500" />
-
-        {/* Main icon circle */}
-        <div
-          className="w-12 h-12 rounded-full flex items-center justify-center text-white relative z-20 shrink-0 text-lg"
-          style={{
-            background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
-            boxShadow: '0 0 24px rgba(34, 211, 238, 0.5)',
-          }}
-        >
-          <ProcessIcon number={number} />
-        </div>
-
-        {/* Connector line to card (horizontal gradient line) */}
-        <div
-          className="absolute top-1/2 -translate-y-1/2 h-0.5 w-10"
-          style={{
-            background: `linear-gradient(to ${isLeft ? 'left' : 'right'}, rgba(34, 211, 238, 0.6), transparent)`,
-            [isLeft ? 'right' : 'left']: '100%',
-          }}
-        />
-      </div>
-    </div>
-
-    {/* Mobile: stacked vertical layout */}
-    <div className="md:hidden w-full">
-      <div className="flex gap-6">
-        {/* Timeline dot and line */}
-        <div className="flex flex-col items-center shrink-0">
-          {/* Glow effect */}
-          <div className="absolute w-14 h-14 rounded-full bg-linear-to-r from-cyan-500/20 to-purple-500/20 blur-lg" />
-
-          {/* Icon background circle */}
-          <div className="absolute w-12 h-12 rounded-full border border-cyan-500/30" />
-
-          {/* Dot with icon */}
-          <div
-            className="w-12 h-12 rounded-full flex items-center justify-center text-white shrink-0 relative z-10"
-            style={{
-              background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
-              boxShadow: '0 0 20px rgba(34, 211, 238, 0.4)',
-            }}
-          >
-            <ProcessIcon number={number} />
-          </div>
-
-          {/* Vertical line (except last) - thicker and more visible */}
-          {number < 4 && (
-            <div className="w-1.5 grow bg-linear-to-b from-cyan-500/80 via-cyan-500/40 to-transparent mt-4 rounded-full" />
-          )}
-        </div>
-
-        {/* Content card */}
-        <div className="flex-1 pt-1 pb-12">
-          <div className="group relative p-6 rounded-2xl border border-slate-700/50 bg-linear-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/50 hover:scale-105">
-            {/* Animated gradient background */}
-            <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(168, 85, 247, 0.1))',
-              }}
-            />
-
-            {/* Content */}
-            <div className="relative z-10">
-              <div className="text-xs font-bold text-cyan-300 uppercase tracking-widest">
-                Etap {step}
-              </div>
-              <h3 className="mt-2 text-lg font-bold text-white">{title}</h3>
-              <p className="mt-3 text-sm text-slate-300 leading-relaxed">{desc}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
 export default function Process() {
   const steps = [
     { s: '1', t: 'Analiza', d: 'Odkrywamy cele biznesowe, grupę docelową, konkurencję i zakres projektu.' },
@@ -180,102 +38,47 @@ export default function Process() {
   ];
 
   return (
-    <section id="proces" className="section relative overflow-hidden">
-      {/* Background decoration - premium */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/3 left-0 w-125 h-125 bg-linear-to-r from-cyan-500/10 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-125 h-125 bg-linear-to-l from-purple-500/10 to-transparent rounded-full blur-3xl" />
-      </div>
+    <section id="proces" className="relative py-24 bg-slate-950 text-white">
+      <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-indigo-500/20 blur-3xl" />
+      <div className="absolute top-40 right-0 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
 
-      {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,211,238,0.05)_1px,transparent_1px),linear-gradient(rgba(34,211,238,0.05)_1px,transparent_1px)] bg-size-[50px_50px]" />
-      </div>
-
-      <div className="container relative z-10">
-        {/* Header */}
-        <div className="mb-20 text-center">
-          <span className="inline-block text-xs font-bold text-pink-400 uppercase tracking-widest px-4 py-2 rounded-full border border-pink-500/30 bg-pink-500/5">Nasz Proces Pracy</span>
-          <h2 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
-            <span className="block bg-linear-to-r from-white via-pink-100 to-white bg-clip-text text-transparent">
-              Jak Pracujemy
-            </span>
+      <div className="container mx-auto px-6">
+        <div className="mb-12 text-center">
+          <span className="inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-indigo-500/30 text-indigo-300 bg-indigo-500/10">
+            Proces pracy
+          </span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-indigo-400 via-violet-400 to-indigo-300">
+            Jak pracujemy
           </h2>
-          <p className="mt-6 text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Cztery dobrze zdefiniowane etapy, które prowadzą od koncepcji do doskonałego wdrożenia i ciągłego wsparcia.
-          </p>
+          <p className="mt-3 text-slate-300">Cztery dobrze zdefiniowane etapy, które prowadzą od koncepcji do doskonałego wdrożenia i ciągłego wsparcia.</p>
         </div>
 
-        {/* Timeline container */}
-        <div className="relative">
-          {/* Vertical line (only visible on md:lg breakpoint) */}
-          <div className="hidden md:block lg:hidden absolute left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-transparent via-cyan-500/40 to-transparent -translate-x-1/2 rounded-full" />
-
-          {/* Desktop horizontal layout (lg+) - clean cards only */}
-          <div className="hidden lg:flex gap-8 items-stretch">
-            {steps.map((it, i) => (
-              <div key={i} className="flex-1 flex flex-col">
-                {/* Card with premium styling */}
-                <div className="group relative flex-1 p-8 rounded-3xl border border-slate-700/50 bg-linear-to-br from-slate-800/70 to-slate-900/70 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-cyan-400/60 hover:shadow-[0_0_50px_rgba(34,211,238,0.25)] hover:scale-105 hover:-translate-y-2">
-                  {/* Animated gradient background */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(168, 85, 247, 0.15))',
-                    }}
-                  />
-
-                  {/* Animated blur orb */}
-                  <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-linear-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
-
-                  {/* Content */}
-                  <div className="relative z-10 flex flex-col h-full">
-                    {/* Step number as title prefix */}
-                    <div className="inline-flex items-center gap-2 mb-5 w-fit px-3 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
-                      <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-                      <span className="text-xs font-bold text-cyan-300 uppercase tracking-widest">Krok {it.s}</span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-2xl font-bold text-white group-hover:text-cyan-200 transition-colors duration-300 mb-4">
-                      {it.t}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed grow">
-                      {it.d}
-                    </p>
-
-                    {/* Bottom accent bar */}
-                    <div className="mt-8 h-1 w-0 bg-linear-to-r from-cyan-500 via-purple-500 to-cyan-500 transition-all duration-500 rounded-full group-hover:w-full" />
-                  </div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((it, i) => (
+            <div
+              key={i}
+              className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur supports-backdrop-filter hover:shadow-2xl hover:shadow-indigo-500/20 transition-transform duration-300 hover:-translate-y-1 p-8 flex flex-col"
+            >
+              <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-violet-500/20 blur-2xl group-hover:scale-125 transition-transform duration-500" />
+              
+              <div className="relative z-10 flex flex-col grow">
+                <div className="mb-4 inline-flex items-center gap-2 w-fit px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/30">
+                  <div className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+                  <span className="text-xs font-bold text-indigo-300 uppercase tracking-widest">Etap {it.s}</span>
                 </div>
+
+                <h3 className="text-xl font-bold text-white group-hover:text-indigo-200 transition-colors duration-300 mb-3">
+                  {it.t}
+                </h3>
+                
+                <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-4 grow">
+                  {it.d}
+                </p>
+
+                <div className="mt-4 h-1 w-0 bg-linear-to-r from-indigo-500 to-violet-500 group-hover:w-full transition-all duration-500 rounded-full" />
               </div>
-            ))}
-          </div>
-
-          {/* Tablet and mobile (md and below, md:lg hidden, then lg:hidden) */}
-          <div className="lg:hidden space-y-16 md:space-y-24">
-            {steps.map((it, i) => (
-              <TimelineItem
-                key={i}
-                step={it.s}
-                title={it.t}
-                desc={it.d}
-                number={i + 1}
-                isLeft={i % 2 === 0}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom accent */}
-        <div className="mt-20 text-center">
-          <div className="inline-block px-8 py-4 rounded-2xl border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm">
-            <p className="text-sm text-slate-300">
-              <span className="text-cyan-300 font-semibold">Typowy projekt trwa 4-8 tygodni</span> w zależności od zakresu i wymagań biznesowych
-            </p>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -17,78 +17,54 @@ export default function About() {
   ];
 
   return (
-    <section id="onasna" className="section relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-25">
-        <div className="absolute top-0 right-0 w-125 h-125 bg-linear-to-l from-purple-500/15 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-125 h-125 bg-linear-to-r from-cyan-500/15 to-transparent rounded-full blur-3xl" />
-      </div>
+    <section id="onasna" className="relative py-24 bg-slate-950 text-white">
+      <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-rose-500/20 blur-3xl" />
+      <div className="absolute top-40 right-0 h-96 w-96 rounded-full bg-fuchsia-500/20 blur-3xl" />
 
-      <div className="container relative z-10">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <span className="inline-block text-xs font-bold text-purple-400 uppercase tracking-widest px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/5">
-            Kim jesteśmy ?
+      <div className="container mx-auto px-6">
+        <div className="mb-12 text-center">
+          <span className="inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-rose-500/30 text-rose-300 bg-rose-500/10">
+            O nas
           </span>
-          <h2 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
-            <span className="block bg-linear-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
-              Poznaj nas bliżej
-            </span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-rose-400 via-fuchsia-400 to-rose-300">
+            Poznaj nas bliżej
           </h2>
-          <p className="mt-6 text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Jesteśmy dwójką młodych oraz ambitnych studentów z Wrocławia, którzy posiadają pasję do tworzenia nowoczesnych i funkcjonalnych stron internetowych. Naszym celem jest dostarczanie rozwiązań, które nie tylko spełniają oczekiwania klientów, ale także przewyższają je pod względem jakości i innowacyjności.
-          </p>
+          <p className="mt-3 text-slate-300">Jesteśmy dwójką młodych oraz ambitnych studentów z Wrocławia, którzy posiadają pasję do tworzenia nowoczesnych i funkcjonalnych stron internetowych.</p>
         </div>
 
-        {/* Team Grid */}
         <div className="grid gap-8 md:grid-cols-2">
           {team.map((member, i) => (
             <div
               key={i}
-              className="group relative flex flex-col rounded-3xl border border-slate-700/50 bg-linear-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:border-purple-400/60 hover:shadow-[0_0_50px_rgba(168,85,247,0.25)]"
+              className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur supports-backdrop-filter hover:shadow-2xl hover:shadow-rose-500/20 transition-transform duration-300 hover:-translate-y-1"
             >
-              {/* Animated gradient background on hover */}
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(34, 211, 238, 0.1))',
-                }}
-              />
+              <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-fuchsia-500/20 blur-2xl group-hover:scale-125 transition-transform duration-500" />
 
-              {/* Animated blur orb */}
-              <div className="absolute -top-1/2 -right-1/2 w-96 h-96 bg-linear-to-br from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
-
-              {/* Image container */}
               <div className="relative h-80 overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-slate-900/80" />
+                <div className="absolute inset-0 bg-linear-to-b from-transparent to-slate-900/80" />
               </div>
 
-              {/* Content */}
-              <div className="relative z-10 flex-1 flex flex-col p-8">
-                {/* Name */}
-                <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-purple-200 transition-colors duration-300">
+              <div className="relative z-10 p-6 flex flex-col">
+                <h3 className="text-2xl font-bold text-white group-hover:text-rose-200 transition-colors duration-300 mb-1">
                   {member.name}
                 </h3>
 
-                {/* Role */}
-                <p className="text-sm font-semibold text-purple-300 mb-4 uppercase tracking-widest">
+                <p className="text-sm font-semibold text-rose-300 mb-4 uppercase tracking-widest">
                   {member.role}
                 </p>
 
-                {/* Bio */}
-                <i className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-6 grow">
+                <i className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-4">
                   {member.bio}
                 </i>
 
-                {/* Bottom accent line */}
-                <div className="mt-6 h-1 w-0 bg-linear-to-r from-purple-500 to-cyan-500 group-hover:w-full transition-all duration-500 rounded-full" />
+                <div className="mt-4 h-1 w-0 bg-linear-to-r from-rose-500 to-fuchsia-500 group-hover:w-full transition-all duration-500 rounded-full" />
               </div>
             </div>
           ))}

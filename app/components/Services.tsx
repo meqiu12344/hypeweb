@@ -76,41 +76,48 @@ export default function Services() {
     { t: 'Projektowanie UX/UI', d: 'Makiety, design system, prototypy, dostępność. Pracujemy nad doświadczeniem użytkownika na każdym kroku.' },
     { t: 'Wdrożenie', d: 'Next.js, TypeScript, React, Tailwind, Node.js. Najnowsze technologie, best practices, skalowalne rozwiązania.' },
     { t: 'SEO & Wydajność', d: 'Optymalizacja struktury, metadane, Core Web Vitals 90+, szybkość ładowania, bezpieczeństwo.' },
-
   ];
 
   return (
-    <section id="uslugi" className="section relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-      </div>
+    <section id="uslugi" className="relative py-24 bg-slate-950 text-white">
+      <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-emerald-500/20 blur-3xl" />
+      <div className="absolute top-40 right-0 h-96 w-96 rounded-full bg-green-500/20 blur-3xl" />
 
-      <div className="container relative z-10">
-        {/* Header */}
+      <div className="container mx-auto px-6">
         <div className="mb-12 text-center">
-          <div className="inline-block">
-            <span className="text-sm font-semibold text-emerald-400 uppercase tracking-widest px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10">Nasze Możliwości</span>
-          </div>
-          <h2 className="mt-3 text-4xl md:text-5xl font-bold bg-linear-to-r from-white via-emerald-100 to-white bg-clip-text text-transparent">
-            Kompleksowe Usługi
+          <span className="inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-emerald-500/30 text-emerald-300 bg-emerald-500/10">
+            Nasze usługi
+          </span>
+          <h2 className="mt-4 text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-emerald-400 via-green-400 to-emerald-300">
+            Kompleksowe rozwiązania
           </h2>
-          <p className="mt-4 text-lg text-slate-400 max-w-2xl mx-auto">
-            Od pomysłu do publikacji – prowadzimy każdy projekt na wszystkich etapach. Gwarancja jakości, wsparcie i rozwój.
-          </p>
+          <p className="mt-3 text-slate-300">Od pomysłu do publikacji – prowadzimy każdy projekt na wszystkich etapach. Gwarancja jakości, wsparcie i rozwój.</p>
         </div>
 
-        {/* Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((it, i) => (
-            <ServiceCard
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {items.map((item, i) => (
+            <a
               key={i}
-              title={it.t}
-              desc={it.d}
-              number={i + 1}
-              icon={i}
-            />
+              href="#kontakt"
+              className="group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur supports-backdrop-filter hover:shadow-2xl hover:shadow-emerald-500/20 transition-transform duration-300 hover:-translate-y-1 p-8 flex flex-col"
+            >
+              <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-green-500/20 blur-2xl group-hover:scale-125 transition-transform duration-500" />
+              <div className="relative z-10 flex flex-col grow">
+                <h3 className="text-xl font-bold text-white group-hover:text-emerald-200 transition-colors duration-300 mb-3">
+                  {item.t}
+                </h3>
+                <p className="text-sm text-slate-300 group-hover:text-slate-200 transition-colors duration-300 leading-relaxed mb-4 grow">
+                  {item.d}
+                </p>
+                <div className="flex items-center gap-2 text-sm font-semibold text-emerald-300 group-hover:text-emerald-200 transition-colors">
+                  <span>Dowiedz się więcej</span>
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+                <div className="mt-4 h-1 w-0 bg-linear-to-r from-emerald-500 to-green-500 group-hover:w-full transition-all duration-500 rounded-full" />
+              </div>
+            </a>
           ))}
         </div>
       </div>

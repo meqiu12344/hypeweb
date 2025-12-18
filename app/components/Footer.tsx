@@ -37,6 +37,7 @@ export default function Footer() {
               <a href="#uslugi" className="hover:text-cyan-200 transition-colors">Usługi</a>
               <a href="#proces" className="hover:text-cyan-200 transition-colors">Proces</a>
               <a href="#onasna" className="hover:text-cyan-200 transition-colors">O nas</a>
+              <a href="#portfolio" className="hover:text-cyan-200 transition-colors">Portfolio</a>
               <a href="#kontakt" className="hover:text-cyan-200 transition-colors">Kontakt</a>
               <a href="/polityka-prywatnosci" className="hover:text-cyan-200 transition-colors">Polityka prywatności</a>
               <a href="/regulamin" className="hover:text-cyan-200 transition-colors">Regulamin</a>

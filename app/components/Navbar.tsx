@@ -9,6 +9,7 @@ export default function Navbar() {
     { href: "#uslugi", label: "Usługi" },
     { href: "#proces", label: "Proces" },
     { href: "#onasna", label: "O nas" },
+    { href: "#portfolio", label: "Portfolio" },
     { href: "#kontakt", label: "Kontakt" },
   ];
 
