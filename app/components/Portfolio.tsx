@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function Portfolio() {
   const projects = [
     {
-      title: "Czekoladziarnia Wrocław",
+      title: "Twoja Czekoladziarnia",
       description:
-        "Elegancka strona dla rzemieślniczej czekoladziarni z Wrocławia. Prezentacja oferty, galerii produktów oraz informacji o firmie z funkcjonalnością menu i kontaktu.",
+        "Elegancka strona dla rzemieślniczej czekoladziarni. Prezentacja oferty, galerii produktów oraz informacji o firmie z funkcjonalnością menu i kontaktu.",
       image:
         "https://images.unsplash.com/photo-1511381939415-e44015466834?w=800&q=80",
       url: "https://czekoladziarnia.vercel.app/",
