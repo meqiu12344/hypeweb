@@ -23,7 +23,7 @@ export default function CTA() {
       setSubmitting(true);
       const res = await fetch("https://formspree.io/f/mdannneo", {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
@@ -61,7 +61,7 @@ export default function CTA() {
           </span>
           <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight">
             <span className="block bg-linear-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
-              Skontaktuj się<br/>z nami
+              Skontaktuj się<br />z nami
             </span>
           </h2>
           <p className="mt-4 text-base text-slate-300 max-w-md leading-relaxed">
@@ -73,10 +73,6 @@ export default function CTA() {
               <div className="text-2xl mt-0.5">📞</div>
               <div className="flex-1">
                 <p className="text-xs uppercase tracking-widest text-slate-400 font-medium">Telefon</p>
-                <a href="tel:+48660240968" className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">
-                  +48 660 240 968
-                </a>
-                <br/>
                 <a href="tel:+48500111222" className="text-sm font-semibold text-cyan-300 group-hover:text-cyan-200 transition-colors duration-200">
                   +48 730 496 403
                 </a>
@@ -110,7 +106,7 @@ export default function CTA() {
               background: 'linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(168, 85, 247, 0.05))',
             }}
           />
-          
+
           {/* Animated blur orb */}
           <div className="absolute -top-1/2 -right-1/4 w-100 h-100 bg-linear-to-br from-cyan-500/20 to-purple-500/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700 pointer-events-none" />
 

@@ -6,13 +6,7 @@ export default function About() {
       name: 'Mateusz Maniak',
       role: 'Programista',
       bio: '" Od 14 roku życia interesuje się programowaniem. Już 3 lat zajmuje się profesjonalnie tworzeniem stron internetowych oraz aplikacji webowych dla prywatnych klientów. Stworzenie strony dla ciebie to dla mnie przyjemność oraz pasja. "',
-      image: '/maniak2.jpg',
-    },
-    {
-      name: 'Emil Malczak',
-      role: 'Przedstawiciel Handlowy',
-      bio: '" Od zawsze miałem łatwość w kontaktach inerpersonalnych oraz budowaniu relacji z klientami. Moim celem jest zrozumienie twoich potrzeb i zapewnienie, że otrzymasz najlepsze możliwe rozwiązanie dla swojej strony internetowej. "',
-      image: '/emil2.png',
+      image: '/mateusz.jpeg',
     }
   ];
 
@@ -24,15 +18,15 @@ export default function About() {
       <div className="container mx-auto px-6">
         <div className="mb-12 text-center">
           <span className="inline-block text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full border border-rose-500/30 text-rose-300 bg-rose-500/10">
-            O nas
+            O mnie
           </span>
           <h2 className="mt-4 text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-rose-400 via-fuchsia-400 to-rose-300">
-            Poznaj nas bliżej
+            Poznaj mnie bliżej
           </h2>
-          <p className="mt-3 text-slate-300">Jesteśmy dwójką młodych oraz ambitnych studentów z Wrocławia, którzy posiadają pasję do tworzenia nowoczesnych i funkcjonalnych stron internetowych.</p>
+          <p className="mt-3 text-slate-300 max-w-2xl mx-auto">Jestem młodym oraz ambitnym studentem z Wrocławia, który posiada pasję do tworzenia nowoczesnych i funkcjonalnych stron internetowych.</p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="max-w-2xl mx-auto">
           {team.map((member, i) => (
             <div
               key={i}

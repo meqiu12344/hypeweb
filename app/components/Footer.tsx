@@ -49,14 +49,8 @@ export default function Footer() {
             <p className="text-sm font-semibold text-white/80 uppercase tracking-widest mb-3">Kontakt</p>
             <div className="space-y-2 text-sm text-white/70">
               <a href="mailto:hypeweb.space@gmail.com" className="block hover:text-cyan-200 transition-colors">hypeweb.space@gmail.com</a>
-              <a href="tel:+48660240968" className="block hover:text-cyan-200 transition-colors">+48 660 240 968</a>
               <a href="tel:+48730496403" className="block hover:text-cyan-200 transition-colors">+48 730 496 403</a>
               <p className="text-white/50">Pon–Pt: 9:00–17:00</p>
-            </div>
-            <div className="mt-4 flex gap-3 text-lg text-white/70">
-              <span aria-hidden>↗</span>
-              <span aria-hidden>✉</span>
-              <span aria-hidden>★</span>
             </div>
           </div>
         </div>
